@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Студия детейлинга АБРАМ в Иркутске. Полировка, керамика, бронирование пленкой, химчистка, кузовной ремонт и рестайлинг. Запись: +7 (914) 006-27-77.">
-    <meta name="keywords" content="детейлинг Иркутск, полировка авто, керамика, бронирование пленкой, химчистка салона, АБРАМ">
-    <meta name="author" content="АБРАМ Detailing Studio">
+    <meta name="description" content="Студия детейлинга GREY в Иркутске. Полировка, керамика, бронирование пленкой, химчистка, кузовной ремонт и рестайлинг. Запись: +7 (914) 905-08-30.">
+    <meta name="keywords" content="детейлинг Иркутск, полировка авто, керамика, бронирование пленкой, химчистка салона, GREY">
+    <meta name="author" content="GREY Detailing Studio">
     <meta name="theme-color" content="#08090B">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="АБРАМ — Премиальный детейлинг в Иркутске">
+    <meta property="og:title" content="GREY — Премиальный детейлинг в Иркутске">
     <meta property="og:description" content="Полировка, керамика, бронирование пленкой, химчистка, кузовной ремонт и рестайлинг. Премиальный уход за вашим автомобилем.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://tel:+79140062777-detailing.ru">
+    <meta property="og:url" content="https://tel:+79149050830-detailing.ru">
     <meta property="og:image" content="audi.jpg">
     <meta property="og:locale" content="ru_RU">
 
-    <title>АБРАМ — Премиальный детейлинг в Иркутске | Полировка, керамика, бронирование</title>
+    <title>GREY — Премиальный детейлинг в Иркутске | Полировка, керамика, бронирование</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,19 +28,19 @@
     {
       "@context": "https://schema.org",
       "@type": "AutoRepair",
-      "name": "АБРАМ Detailing Studio",
+      "name": "GREY Detailing Studio",
       "image": "fasad.jpg",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "ул. Новаторов, 36А",
+        "streetAddress": "ул. Советская, 3а",
         "addressLocality": "Иркутск",
         "addressCountry": "RU"
       },
-      "telephone": "+79140062777",
+      "telephone": "+79149050830",
       "priceRange": "₽₽₽",
       "founder": {
         "@type": "Person",
-        "name": "Дмитрий"
+        "name": "Сергей"
       }
     }
     </script>
@@ -186,13 +186,47 @@
 
         .logo {
             display: flex;
-            flex-direction: column;
+            align-items: center;
+            gap: 16px;
             line-height: 1;
+        }
+
+        .logo-image {
+            width: 70px;
+            height: 70px;
+            flex-shrink: 0;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 2px solid rgba(245, 245, 245, 0.1);
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .logo-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .logo:hover .logo-image {
+            border-color: var(--accent-orange);
+            box-shadow: 0 0 20px rgba(255, 90, 0, 0.3);
+        }
+
+        .logo:hover .logo-image img {
+            transform: scale(1.05);
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.1;
         }
 
         .logo-main {
             font-family: var(--font-heading);
-            font-size: 28px;
+            font-size: 32px;
             font-weight: 700;
             color: var(--text-primary);
             letter-spacing: 0.15em;
@@ -201,8 +235,9 @@
         .logo-sub {
             font-size: 10px;
             color: var(--text-secondary);
-            letter-spacing: 0.2em;
+            letter-spacing: 0.3em;
             margin-top: 4px;
+            text-transform: uppercase;
         }
 
         .nav-desktop {
@@ -818,6 +853,17 @@
             margin-bottom: 60px;
         }
 
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .footer-logo .logo-image {
+            width: 60px;
+            height: 60px;
+        }
+
         .footer-logo .logo-main {
             font-size: 24px;
         }
@@ -945,6 +991,15 @@
             .about-highlight::after {
                 display: none;
             }
+
+            .logo-image {
+                width: 55px;
+                height: 55px;
+            }
+
+            .logo-main {
+                font-size: 26px;
+            }
         }
 
         /* Mobile fixed CTA */
@@ -978,8 +1033,13 @@
     <header class="header" id="header">
         <div class="container header-inner">
             <a href="#" class="logo">
-                <span class="logo-main">АБРАМ</span>
-                <span class="logo-sub">DETAILING STUDIO</span>
+                <div class="logo-image">
+                    <img src="logo.jpg" alt="GREY Detailing Studio - логотип">
+                </div>
+                <div class="logo-text">
+                    <span class="logo-main">GREY</span>
+                    <span class="logo-sub">DETAILING STUDIO</span>
+                </div>
             </a>
             
             <nav class="nav-desktop">
@@ -991,8 +1051,8 @@
             </nav>
 
             <div class="header-actions">
-                <a href="tel:+79140062777" class="header-phone">+7 (914) 006-27-77</a>
-                <a href="https://wa.me/79140062777" target="_blank" class="btn btn-primary btn-small">Записаться</a>
+                <a href="tel:+79149050830" class="header-phone">+7 (914) 905-08-30</a>
+                <a href="https://wa.me/79149050830" target="_blank" class="btn btn-primary btn-small">Записаться</a>
             </div>
 
             <div class="burger" id="burger">
@@ -1005,19 +1065,28 @@
 
     <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobileMenu">
+        <div class="logo" style="margin-bottom: 20px;">
+            <div class="logo-image">
+                <img src="logo.jpg" alt="GREY Detailing Studio - логотип">
+            </div>
+            <div class="logo-text">
+                <span class="logo-main">GREY</span>
+                <span class="logo-sub">DETAILING STUDIO</span>
+            </div>
+        </div>
         <a href="#hero" class="nav-link mobile-link">Главная</a>
         <a href="#services" class="nav-link mobile-link">Услуги</a>
         <a href="#why-us" class="nav-link mobile-link">Почему мы</a>
         <a href="#about" class="nav-link mobile-link">О нас</a>
         <a href="#contacts" class="nav-link mobile-link">Контакты</a>
-        <a href="tel:+79140062777" class="nav-link" style="color: var(--accent-orange);">+7 (914) 006-27-77</a>
-        <a href="https://wa.me/79140062777" target="_blank" class="btn btn-primary">Записаться по телефону</a>
+        <a href="tel:+79149050830" class="nav-link" style="color: var(--accent-orange);">+7 (914) 905-08-30</a>
+        <a href="https://wa.me/79149050830" target="_blank" class="btn btn-primary">Записаться по телефону</a>
     </div>
 
     <!-- Hero Section -->
     <section class="hero" id="hero">
         <div class="hero-image">
-            <img src="audi.jpg" alt="Белый Audi Q7 — премиальный детейлинг Абрам" loading="eager">
+            <img src="audi.jpg" alt="Белый Audi Q7 — премиальный детейлинг Grey" loading="eager">
         </div>
         <div class="hero-overlay"></div>
         
@@ -1026,7 +1095,7 @@
             <h1 class="hero-title">ПРЕМИАЛЬНЫЙ ДЕТЕЙЛИНГ В ИРКУТСКЕ</h1>
             <p class="hero-subtitle">Возвращаем автомобилям безупречный внешний вид. Защита, восстановление и индивидуальный стиль вашего автомобиля.</p>
             <div class="hero-buttons">
-                <a href="https://wa.me/79140062777" target="_blank" class="btn btn-primary">Записаться</a>
+                <a href="https://wa.me/79149050830" target="_blank" class="btn btn-primary">Записаться</a>
                 <a href="#services" class="btn btn-outline">Наши услуги</a>
             </div>
         </div>
@@ -1043,7 +1112,6 @@
     </section>
 
     <!-- Services Section -->
-        <!-- Services Section -->
     <section class="section services" id="services">
         <div class="container">
             <div class="section-header fade-in-up">
@@ -1053,106 +1121,106 @@
             </div>
 
             <div class="services-grid">
-                <!-- Service 1 -->
+                <!-- Service 1: Легкая полировка -->
                 <div class="service-card fade-in-up">
                     <div class="service-card-image">
-                        <img src="polish.jpg" alt="Полировка кузова" loading="lazy">
+                        <img src="polish.jpg" alt="Легкая полировка кузова" loading="lazy">
                     </div>
                     <div class="service-card-content">
                         <div class="service-number">01</div>
-                        <h3 class="service-name">Полировка</h3>
-                        <p class="service-desc">Восстановление блеска, устранение мелких дефектов лакокрасочного покрытия и придание кузову глубокого глянца.</p>
-                        <div class="service-price">от 9 000 ₽</div>
-                        <a href="https://wa.me/79140062777" target="_blank" class="btn btn-outline btn-small">Записаться</a>
+                        <h3 class="service-name">Легкая полировка</h3>
+                        <p class="service-desc">Устранение мелких царапин и потертостей, восстановление блеска лакокрасочного покрытия. Идеально для поддержания внешнего вида.</p>
+                        <div class="service-price">от 7 000 ₽</div>
+                        <a href="https://wa.me/79149050830" target="_blank" class="btn btn-outline btn-small">Записаться</a>
                     </div>
                 </div>
 
-                <!-- Service 2 -->
+                <!-- Service 2: Средняя полировка -->
                 <div class="service-card fade-in-up">
                     <div class="service-card-image">
-                        <img src="landcruiser.jpg" alt="Керамическое покрытие" loading="lazy">
+                        <img src="landcruiser.jpg" alt="Средняя полировка кузова" loading="lazy">
                     </div>
                     <div class="service-card-content">
                         <div class="service-number">02</div>
-                        <h3 class="service-name">Керамика</h3>
-                        <p class="service-desc">Защитное покрытие кузова, усиление блеска и облегчение последующего ухода за автомобилем.</p>
-                        <div class="service-price">от 10 000 ₽</div>
-                        <a href="https://wa.me/79140062777" target="_blank" class="btn btn-outline btn-small">Записаться</a>
+                        <h3 class="service-name">Средняя полировка</h3>
+                        <p class="service-desc">Глубокое восстановление ЛКП, устранение голограмм и более выраженных дефектов. Возвращение кузову заводского блеска.</p>
+                        <div class="service-price">от 11 000 ₽</div>
+                        <a href="https://wa.me/79149050830" target="_blank" class="btn btn-outline btn-small">Записаться</a>
                     </div>
                 </div>
 
-                <!-- Service 3 -->
+                <!-- Service 3: Глубокая полировка -->
                 <div class="service-card fade-in-up">
                     <div class="service-card-image">
-                        <img src="mercedes.jpg" alt="Бронирование пленкой" loading="lazy">
+                        <img src="mercedes.jpg" alt="Глубокая полировка кузова" loading="lazy">
                     </div>
                     <div class="service-card-content">
                         <div class="service-number">03</div>
-                        <h3 class="service-name">Бронирование</h3>
-                        <p class="service-desc">Защита кузова полиуретановой пленкой от сколов, царапин и дорожных воздействий.</p>
-                        <div class="service-price">от 35 000 ₽</div>
-                        <a href="https://wa.me/79140062777" target="_blank" class="btn btn-outline btn-small">Записаться</a>
+                        <h3 class="service-name">Глубокая полировка</h3>
+                        <p class="service-desc">Максимальное восстановление лакокрасочного покрытия, удаление глубоких царапин и окислов. Полное преображение кузова.</p>
+                        <div class="service-price">от 17 000 ₽</div>
+                        <a href="https://wa.me/79149050830" target="_blank" class="btn btn-outline btn-small">Записаться</a>
                     </div>
                 </div>
 
-                <!-- Service 4 -->
+                <!-- Service 4: Нанесение керамики -->
                 <div class="service-card fade-in-up">
                     <div class="service-card-image">
-                        <img src="wash.jpg" alt="Химчистка салона" loading="lazy">
+                        <img src="keramika.jpg" alt="Нанесение керамики — защитное покрытие кузова" loading="lazy">
                     </div>
                     <div class="service-card-content">
                         <div class="service-number">04</div>
-                        <h3 class="service-name">Химчистка</h3>
-                        <p class="service-desc">Профессиональная глубокая очистка салона, восстановление чистоты и свежести интерьера.</p>
+                        <h3 class="service-name">Нанесение керамики</h3>
+                        <p class="service-desc">Защитное керамическое покрытие кузова. Усиление блеска, гидрофобный эффект и долговременная защита ЛКП.</p>
                         <div class="service-price">от 7 000 ₽</div>
-                        <a href="https://wa.me/79140062777" target="_blank" class="btn btn-outline btn-small">Записаться</a>
+                        <a href="https://wa.me/79149050830" target="_blank" class="btn btn-outline btn-small">Записаться</a>
                     </div>
                 </div>
 
-                <!-- Service 5 -->
+                <!-- Service 5: Нанесение твердого воска -->
                 <div class="service-card fade-in-up">
                     <div class="service-card-image">
-                        <img src="process.jpg" alt="Удаление вмятин" loading="lazy">
+                        <img src="vosk.jpg" alt="Нанесение твердого воска — защита и блеск кузова" loading="lazy">
                     </div>
                     <div class="service-card-content">
                         <div class="service-number">05</div>
-                        <h3 class="service-name">Удаление вмятин</h3>
-                        <p class="service-desc">Восстановление геометрии кузовных элементов и устранение вмятин без повреждения ЛКП.</p>
-                        <div class="service-price">от 1 000 ₽</div>
-                        <a href="https://wa.me/79140062777" target="_blank" class="btn btn-outline btn-small">Записаться</a>
+                        <h3 class="service-name">Нанесение твердого воска</h3>
+                        <p class="service-desc">Защита и блеск кузова с помощью премиального твердого воска. Гидрофобные свойства и насыщенный цвет.</p>
+                        <div class="service-price">от 2 000 ₽</div>
+                        <a href="https://wa.me/79149050830" target="_blank" class="btn btn-outline btn-small">Записаться</a>
                     </div>
                 </div>
 
-                <!-- Service 6 -->
+                <!-- Service 6: Антидождь + удаление водного камня -->
                 <div class="service-card fade-in-up">
                     <div class="service-card-image">
-                        <img src="audi.jpg" alt="Кузовной ремонт" loading="lazy">
+                        <img src="kamen.jpg" alt="Антидождь и удаление водного камня со стекол и кузова" loading="lazy">
                     </div>
                     <div class="service-card-content">
                         <div class="service-number">06</div>
-                        <h3 class="service-name">Кузовной ремонт</h3>
-                        <p class="service-desc">Восстановление кузова, устранение повреждений и возвращение автомобилю аккуратного внешнего вида.</p>
-                        <div class="service-price">от 12 000 ₽</div>
-                        <a href="https://wa.me/79140062777" target="_blank" class="btn btn-outline btn-small">Записаться</a>
+                        <h3 class="service-name">Антидождь + удаление водного камня</h3>
+                        <p class="service-desc">Обработка стекол составом «антидождь» и удаление минеральных отложений (водного камня) с кузова и стекол.</p>
+                        <div class="service-price">от 3 000 ₽</div>
+                        <a href="https://wa.me/79149050830" target="_blank" class="btn btn-outline btn-small">Записаться</a>
                     </div>
                 </div>
 
-                <!-- Service 7 -->
+                <!-- Service 7: Оклейка зон под ручками -->
                 <div class="service-card fade-in-up">
-                                       <div class="service-card-image" style="height: 350px;">
-                        <img src="restyling.jpg" alt="Рестайлинг ТЛК 200" loading="lazy" style="object-fit: cover; object-position: center;">
+                    <div class="service-card-image">
+                        <img src="process.jpg" alt="Мастер в процессе работы — профессиональный детейлинг" loading="lazy">
                     </div>
                     <div class="service-card-content">
                         <div class="service-number">07</div>
-                        <h3 class="service-name">Рестайлинг</h3>
-                        <p class="service-desc">Комплексное преображение автомобиля, изменение внешнего облика и создание индивидуального стиля.</p>
-                        <div class="service-price">от 100 000 ₽</div>
-                        <a href="https://wa.me/79140062777" target="_blank" class="btn btn-outline btn-small">Записаться</a>
+                        <h3 class="service-name">Оклейка зон под ручками</h3>
+                        <p class="service-desc">Защита наиболее уязвимых участков кузова (зоны под дверными ручками) полиуретановой пленкой от царапин.</p>
+                        <div class="service-price">от 2 500 ₽</div>
+                        <a href="https://wa.me/79149050830" target="_blank" class="btn btn-outline btn-small">Записаться</a>
                     </div>
                 </div>
             </div>
         </div>
-    </section></section>
+    </section>
 
     <!-- Why Choose Us Section -->
     <section class="section why-us" id="why-us">
@@ -1165,7 +1233,7 @@
 
             <div class="why-us-grid">
                 <div class="why-us-image fade-in-up">
-                    <img src="process.jpg" alt="Мастер полирует BMW в студии Абрам" loading="lazy">
+                    <img src="process.jpg" alt="Мастер полирует автомобиль в студии Grey" loading="lazy">
                 </div>
                 
                 <div class="advantages-list">
@@ -1181,7 +1249,7 @@
                         <div class="advantage-number">02</div>
                         <div class="advantage-content">
                             <h3>ИНДИВИДУАЛЬНЫЙ ПОДХОД</h3>
-                            <p>Директор Дмитрий лично уделяет внимание пожеланиям клиентов и помогает подобрать оптимальное решение для каждого автомобиля.</p>
+                            <p>Директор Сергей лично уделяет внимание пожеланиям клиентов и помогает подобрать оптимальное решение для каждого автомобиля.</p>
                         </div>
                     </div>
                     
@@ -1212,7 +1280,7 @@
                 <div class="section-tag" style="justify-content: center;">04 / О НАС</div>
                 <h2 class="section-title" style="margin-bottom: 32px;">АВТОМОБИЛЬ ЗАСЛУЖИВАЕТ БОЛЬШЕГО</h2>
                 <p class="about-text">
-                    АБРАМ — студия профессионального детейлинга в Иркутске. Мы объединяем внимание к деталям, современные технологии и индивидуальный подход, чтобы каждый автомобиль выглядел безупречно.<br><br>
+                    GREY — студия профессионального детейлинга в Иркутске. Мы объединяем внимание к деталям, современные технологии и индивидуальный подход, чтобы каждый автомобиль выглядел безупречно.<br><br>
                     Для нас важен не просто результат на фотографиях, а качество работы, которое можно увидеть в каждой детали.
                 </p>
                 <div class="about-highlight">ВАШ АВТОМОБИЛЬ. НАШЕ МАСТЕРСТВО.</div>
@@ -1226,7 +1294,7 @@
             <div class="cta-content fade-in-up">
                 <h2 class="cta-title">ПОРА ПРИВЕСТИ АВТОМОБИЛЬ В ИДЕАЛЬНОЕ СОСТОЯНИЕ?</h2>
                 <p class="cta-text">Свяжитесь с нами, расскажите о своем автомобиле и получите консультацию по подходящим услугам.</p>
-                <a href="https://wa.me/79140062777" target="_blank" class="btn btn-primary">Записаться по телефону</a>
+                <a href="https://wa.me/79149050830" target="_blank" class="btn btn-primary">Записаться по телефону</a>
             </div>
         </div>
     </section>
@@ -1236,37 +1304,36 @@
         <div class="container">
             <div class="section-header fade-in-up">
                 <div class="section-tag">05 / КОНТАКТЫ</div>
-                <h2 class="section-title">МЫ ЖДЕМ ВАС В АБРАМ</h2>
+                <h2 class="section-title">МЫ ЖДЕМ ВАС В GREY</h2>
             </div>
 
             <div class="contacts-grid">
                 <div class="contacts-image fade-in-up">
-                    <img src="fasad.jpg" alt="Фасад студии детейлинга АБРАМ в Иркутске" loading="lazy">
+                    <img src="fasad.jpg" alt="Фасад студии детейлинга GREY в Иркутске" loading="lazy">
                 </div>
 
                 <div class="contacts-info fade-in-up">
                     <div class="contact-block">
-                        <h3>СТУДИЯ ДЕТЕЙЛИНГА «АБРАМ»</h3>
-                        <p>Иркутск, ул. Новаторов, 36А</p>
+                        <h3>СТУДИЯ ДЕТЕЙЛИНГА «GREY»</h3>
+                        <p>Иркутск, ул. Советская, 3а</p>
                     </div>
 
                     <div class="contact-block">
                         <h3>ТЕЛЕФОН</h3>
-                        <a href="tel:+79140062777">+7 (914) 006-27-77</a>
+                        <a href="tel:+79149050830">+7 (914) 905-08-30</a>
                     </div>
 
                     <div class="contact-block">
                         <h3>ДИРЕКТОР</h3>
-                        <p>Дмитрий</p>
+                        <p>Сергей</p>
                     </div>
 
                     <div class="contact-actions">
-                        <a href="tel:+79140062777" class="btn btn-outline btn-contact">Позвонить</a>
-                        <a href="https://wa.me/79140062777" target="_blank" class="btn btn-primary btn-contact">Позвонить</a>
+                        <a href="tel:+79149050830" class="btn btn-outline btn-contact">Позвонить</a>
                         
                     </div>
 
-                    <a href="https://yandex.ru/maps/?text=Иркутск,+ул.+Новаторов,+36А" target="_blank" class="btn btn-outline btn-small" style="margin-top: 16px; width: fit-content;">
+                    <a href="https://yandex.ru/maps/?text=Иркутск,+ул.+Советская,+3а" target="_blank" class="btn btn-outline btn-small" style="margin-top: 16px; width: fit-content;">
                         Построить маршрут
                     </a>
                 </div>
@@ -1279,12 +1346,15 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-logo">
-                    <div class="logo">
-                        <span class="logo-main">АБРАМ</span>
+                    <div class="logo-image">
+                        <img src="logo.jpg" alt="GREY Detailing Studio - логотип">
+                    </div>
+                    <div class="logo-text">
+                        <span class="logo-main">GREY</span>
                         <span class="logo-sub">DETAILING STUDIO</span>
                     </div>
-                    <p class="footer-desc">Премиальный уход, защита и восстановление вашего автомобиля в Иркутске.</p>
                 </div>
+                <p class="footer-desc" style="grid-column: 1 / -1; margin-top: 20px;">Премиальный уход, защита и восстановление вашего автомобиля в Иркутске.</p>
 
                 <div>
                     <h4 class="footer-title">НАВИГАЦИЯ</h4>
@@ -1299,25 +1369,25 @@
                 <div>
                     <h4 class="footer-title">УСЛУГИ</h4>
                     <div class="footer-links">
-                        <a href="#services" class="footer-link">Полировка</a>
+                        <a href="#services" class="footer-link">Легкая полировка</a>
+                        <a href="#services" class="footer-link">Средняя полировка</a>
+                        <a href="#services" class="footer-link">Глубокая полировка</a>
                         <a href="#services" class="footer-link">Керамика</a>
-                        <a href="#services" class="footer-link">Бронирование</a>
-                        <a href="#services" class="footer-link">Химчистка</a>
                     </div>
                 </div>
 
                 <div>
                     <h4 class="footer-title">КОНТАКТЫ</h4>
                     <div class="footer-links">
-                        <a href="tel:+79140062777" class="footer-link">+7 (914) 006-27-77</a>
-                        <span class="footer-link">Иркутск, ул. Новаторов, 36А</span>
-                        <a href="https://wa.me/79140062777" target="_blank" class="footer-link" style="color: var(--accent-orange);">Написать в WhatsApp</a>
+                        <a href="tel:+79149050830" class="footer-link">+7 (914) 905-08-30</a>
+                        <span class="footer-link">Иркутск, ул. Советская, 3а</span>
+                        <a href="tel:+79149050830" target="_blank" class="footer-link" style="color: var(--accent-orange);">Связаться</a>
                     </div>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <div class="copyright">© 2026 АБРАМ. ВСЕ ПРАВА ЗАЩИЩЕНЫ.</div>
+                <div class="copyright">© 2026 GREY. ВСЕ ПРАВА ЗАЩИЩЕНЫ.</div>
                 <div class="copyright">Премиальный детейлинг в Иркутске</div>
             </div>
         </div>
@@ -1325,7 +1395,7 @@
 
     <!-- Mobile Fixed CTA -->
     <div class="mobile-fixed-cta">
-        <a href="tel:+79140062777" target="_blank" class="btn btn-primary" style="width: 100%;">Записаться</a>
+        <a href="tel:+79149050830" target="_blank" class="btn btn-primary" style="width: 100%;">Записаться</a>
     </div>
 
     <script>
