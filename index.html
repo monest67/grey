@@ -1,0 +1,1400 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Студия детейлинга АБРАМ в Иркутске. Полировка, керамика, бронирование пленкой, химчистка, кузовной ремонт и рестайлинг. Запись: +7 (914) 006-27-77.">
+    <meta name="keywords" content="детейлинг Иркутск, полировка авто, керамика, бронирование пленкой, химчистка салона, АБРАМ">
+    <meta name="author" content="АБРАМ Detailing Studio">
+    <meta name="theme-color" content="#08090B">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="АБРАМ — Премиальный детейлинг в Иркутске">
+    <meta property="og:description" content="Полировка, керамика, бронирование пленкой, химчистка, кузовной ремонт и рестайлинг. Премиальный уход за вашим автомобилем.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://abram-detailing.ru">
+    <meta property="og:image" content="audi.jpg">
+    <meta property="og:locale" content="ru_RU">
+
+    <title>АБРАМ — Премиальный детейлинг в Иркутске | Полировка, керамика, бронирование</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Roboto+Condensed:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AutoRepair",
+      "name": "АБРАМ Detailing Studio",
+      "image": "fasad.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "ул. Новаторов, 36А",
+        "addressLocality": "Иркутск",
+        "addressCountry": "RU"
+      },
+      "telephone": "+79140062777",
+      "priceRange": "₽₽₽",
+      "founder": {
+        "@type": "Person",
+        "name": "Дмитрий"
+      }
+    }
+    </script>
+
+    <style>
+        :root {
+            --bg-primary: #08090B;
+            --bg-secondary: #111318;
+            --bg-tertiary: #1A1D23;
+            --text-primary: #F5F5F5;
+            --text-secondary: #969BA5;
+            --accent-orange: #FF5A00;
+            --accent-blue: #007BFF;
+            --font-heading: 'Oswald', sans-serif;
+            --font-body: 'Roboto Condensed', sans-serif;
+            --transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-weight: 600;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px 32px;
+            font-family: var(--font-heading);
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-orange);
+            color: #FFFFFF;
+        }
+
+        .btn-primary:hover {
+            background-color: #ff7a33;
+            box-shadow: 0 0 20px rgba(255, 90, 0, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--text-primary);
+            border: 1px solid rgba(245, 245, 245, 0.3);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--accent-orange);
+            color: var(--accent-orange);
+        }
+
+        .btn-small {
+            padding: 12px 24px;
+            font-size: 12px;
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 20px 0;
+            transition: var(--transition);
+            background: transparent;
+        }
+
+        .header.scrolled {
+            background: rgba(8, 9, 11, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            flex-direction: column;
+            line-height: 1;
+        }
+
+        .logo-main {
+            font-family: var(--font-heading);
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--text-primary);
+            letter-spacing: 0.15em;
+        }
+
+        .logo-sub {
+            font-size: 10px;
+            color: var(--text-secondary);
+            letter-spacing: 0.2em;
+            margin-top: 4px;
+        }
+
+        .nav-desktop {
+            display: flex;
+            gap: 32px;
+        }
+
+        .nav-link {
+            font-size: 13px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-secondary);
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--accent-orange);
+            transition: var(--transition);
+        }
+
+        .nav-link:hover {
+            color: var(--text-primary);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .header-phone {
+            font-family: var(--font-heading);
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+
+        .header-phone:hover {
+            color: var(--accent-orange);
+        }
+
+        .burger {
+            display: none;
+            flex-direction: column;
+            gap: 6px;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .burger span {
+            display: block;
+            width: 28px;
+            height: 2px;
+            background-color: var(--text-primary);
+            transition: var(--transition);
+        }
+
+        .burger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 6px);
+        }
+
+        .burger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .burger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -6px);
+        }
+
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 100%;
+            height: 100vh;
+            background-color: var(--bg-primary);
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 32px;
+            transition: var(--transition);
+        }
+
+        .mobile-menu.active {
+            right: 0;
+        }
+
+        .mobile-menu .nav-link {
+            font-size: 24px;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 100vh;
+            min-height: 700px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .hero-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, rgba(8, 9, 11, 0.95) 0%, rgba(8, 9, 11, 0.7) 50%, rgba(8, 9, 11, 0.3) 100%);
+            z-index: 2;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 3;
+            max-width: 650px;
+        }
+
+        .hero-tag {
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 0.2em;
+            color: var(--accent-orange);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .hero-tag::before {
+            content: '';
+            width: 40px;
+            height: 1px;
+            background-color: var(--accent-orange);
+        }
+
+        .hero-title {
+            font-size: clamp(40px, 6vw, 72px);
+            line-height: 1.1;
+            margin-bottom: 24px;
+            color: var(--text-primary);
+        }
+
+        .hero-subtitle {
+            font-size: 18px;
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+            max-width: 500px;
+            line-height: 1.6;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .hero-meta {
+            position: absolute;
+            bottom: 40px;
+            left: 0;
+            z-index: 3;
+            display: flex;
+            gap: 32px;
+            font-size: 11px;
+            letter-spacing: 0.15em;
+            color: var(--text-secondary);
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 40px;
+            right: 40px;
+            z-index: 3;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-secondary);
+            font-size: 11px;
+            letter-spacing: 0.1em;
+            animation: bounce 2s infinite;
+        }
+
+        .scroll-indicator::after {
+            content: '';
+            width: 1px;
+            height: 60px;
+            background: linear-gradient(to bottom, var(--accent-orange), transparent);
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+
+        /* Section Common */
+        .section {
+            padding: 100px 0;
+            position: relative;
+        }
+
+        .section-header {
+            margin-bottom: 60px;
+        }
+
+        .section-tag {
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 0.2em;
+            color: var(--accent-orange);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .section-tag::before {
+            content: '';
+            width: 30px;
+            height: 1px;
+            background-color: var(--accent-orange);
+        }
+
+        .section-title {
+            font-size: clamp(32px, 4vw, 48px);
+            line-height: 1.2;
+            margin-bottom: 16px;
+        }
+
+        .section-subtitle {
+            font-size: 16px;
+            color: var(--text-secondary);
+            max-width: 600px;
+        }
+
+        /* Services Section */
+        .services {
+            background-color: var(--bg-secondary);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+
+        .service-card {
+            background-color: var(--bg-tertiary);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            overflow: hidden;
+            transition: var(--transition);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-card:hover {
+            border-color: rgba(255, 90, 0, 0.3);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .service-card-image {
+            width: 100%;
+            height: 220px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .service-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            transition: transform 0.6s ease;
+        }
+
+        .service-card:hover .service-card-image img {
+            transform: scale(1.05);
+        }
+
+        .service-card-icon {
+            width: 100%;
+            height: 220px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--bg-tertiary) 0%, var(--bg-secondary) 100%);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .service-card-icon svg {
+            width: 64px;
+            height: 64px;
+            stroke: var(--accent-orange);
+            opacity: 0.6;
+        }
+
+        .service-card-content {
+            padding: 24px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-number {
+            font-family: var(--font-heading);
+            font-size: 12px;
+            color: var(--accent-orange);
+            letter-spacing: 0.1em;
+            margin-bottom: 8px;
+        }
+
+        .service-name {
+            font-size: 20px;
+            margin-bottom: 12px;
+            color: var(--text-primary);
+        }
+
+        .service-desc {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+            line-height: 1.6;
+            flex-grow: 1;
+        }
+
+        .service-price {
+            font-family: var(--font-heading);
+            font-size: 24px;
+            color: var(--accent-orange);
+            margin-bottom: 20px;
+        }
+
+        .service-price span {
+            font-size: 14px;
+            color: var(--text-secondary);
+            font-weight: 400;
+        }
+
+        /* Why Choose Us */
+        .why-us {
+            background-color: var(--bg-primary);
+        }
+
+        .why-us-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .why-us-image {
+            position: relative;
+            height: 600px;
+            overflow: hidden;
+        }
+
+        .why-us-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .why-us-image::after {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: -20px;
+            bottom: -20px;
+            border: 1px solid var(--accent-orange);
+            z-index: -1;
+            opacity: 0.3;
+        }
+
+        .advantages-list {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+
+        .advantage-item {
+            display: flex;
+            gap: 20px;
+            padding-bottom: 32px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .advantage-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .advantage-number {
+            font-family: var(--font-heading);
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--accent-orange);
+            line-height: 1;
+            min-width: 40px;
+        }
+
+        .advantage-content h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+
+        .advantage-content p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* About Section */
+        .about {
+            background-color: var(--bg-secondary);
+            text-align: center;
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .about-text {
+            font-size: 18px;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 40px;
+        }
+
+        .about-highlight {
+            font-family: var(--font-heading);
+            font-size: clamp(24px, 3vw, 36px);
+            color: var(--text-primary);
+            letter-spacing: 0.1em;
+            position: relative;
+            display: inline-block;
+            padding: 0 20px;
+        }
+
+        .about-highlight::before,
+        .about-highlight::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 60px;
+            height: 1px;
+            background-color: var(--accent-orange);
+        }
+
+        .about-highlight::before {
+            left: -80px;
+        }
+
+        .about-highlight::after {
+            right: -80px;
+        }
+
+        /* CTA Section */
+        .cta {
+            background-color: var(--bg-primary);
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .cta::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 90, 0, 0.05) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 2;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .cta-title {
+            font-size: clamp(28px, 4vw, 42px);
+            margin-bottom: 20px;
+        }
+
+        .cta-text {
+            font-size: 16px;
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+        }
+
+        /* Contacts Section */
+        .contacts {
+            background-color: var(--bg-secondary);
+        }
+
+        .contacts-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .contacts-image {
+            width: 100%;
+            height: 500px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .contacts-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .contacts-info {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+
+        .contact-block h3 {
+            font-size: 14px;
+            color: var(--accent-orange);
+            letter-spacing: 0.1em;
+            margin-bottom: 8px;
+        }
+
+        .contact-block p, .contact-block a {
+            font-size: 18px;
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+
+        .contact-block a:hover {
+            color: var(--accent-orange);
+        }
+
+        .contact-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-top: 16px;
+        }
+
+        .btn-contact {
+            flex: 1;
+            min-width: 140px;
+        }
+
+        .btn-telegram {
+            background-color: var(--bg-tertiary);
+            color: var(--text-primary);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .btn-telegram:hover {
+            border-color: var(--accent-blue);
+            color: var(--accent-blue);
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--bg-primary);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 60px 0 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .footer-logo .logo-main {
+            font-size: 24px;
+        }
+
+        .footer-desc {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-top: 16px;
+            max-width: 300px;
+            line-height: 1.6;
+        }
+
+        .footer-title {
+            font-size: 14px;
+            color: var(--text-primary);
+            margin-bottom: 20px;
+            letter-spacing: 0.1em;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer-link {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        .footer-link:hover {
+            color: var(--accent-orange);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .copyright {
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        /* Animations */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .why-us-grid,
+            .contacts-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .why-us-image {
+                height: 400px;
+                order: -1;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-desktop,
+            .header-actions .header-phone,
+            .header-actions .btn {
+                display: none;
+            }
+
+            .burger {
+                display: flex;
+            }
+
+            .hero-title {
+                font-size: 36px;
+            }
+
+            .hero-meta {
+                display: none;
+            }
+
+            .scroll-indicator {
+                display: none;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-actions {
+                flex-direction: column;
+            }
+
+            .btn-contact {
+                width: 100%;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .about-highlight::before,
+            .about-highlight::after {
+                display: none;
+            }
+        }
+
+        /* Mobile fixed CTA */
+        .mobile-fixed-cta {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 16px 24px;
+            background-color: rgba(8, 9, 11, 0.95);
+            backdrop-filter: blur(10px);
+            border-top: 1px solid rgba(255, 90, 0, 0.3);
+            z-index: 998;
+        }
+
+        @media (max-width: 768px) {
+            .mobile-fixed-cta {
+                display: block;
+            }
+            
+            .footer {
+                padding-bottom: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <span class="logo-main">АБРАМ</span>
+                <span class="logo-sub">DETAILING STUDIO</span>
+            </a>
+            
+            <nav class="nav-desktop">
+                <a href="#hero" class="nav-link">Главная</a>
+                <a href="#services" class="nav-link">Услуги</a>
+                <a href="#why-us" class="nav-link">Почему мы</a>
+                <a href="#about" class="nav-link">О нас</a>
+                <a href="#contacts" class="nav-link">Контакты</a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="tel:+79140062777" class="header-phone">+7 (914) 006-27-77</a>
+                <a href="https://wa.me/79140062777" target="_blank" class="btn btn-primary btn-small">Записаться</a>
+            </div>
+
+            <div class="burger" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#hero" class="nav-link mobile-link">Главная</a>
+        <a href="#services" class="nav-link mobile-link">Услуги</a>
+        <a href="#why-us" class="nav-link mobile-link">Почему мы</a>
+        <a href="#about" class="nav-link mobile-link">О нас</a>
+        <a href="#contacts" class="nav-link mobile-link">Контакты</a>
+        <a href="tel:+79140062777" class="nav-link" style="color: var(--accent-orange);">+7 (914) 006-27-77</a>
+        <a href="https://wa.me/79140062777" target="_blank" class="btn btn-primary">Записаться в WhatsApp</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-image">
+            <img src="audi.jpg" alt="Белый Audi Q7 — премиальный детейлинг Абрам" loading="eager">
+        </div>
+        <div class="hero-overlay"></div>
+        
+        <div class="container hero-content">
+            <div class="hero-tag">DETAILING STUDIO • IRKUTSK</div>
+            <h1 class="hero-title">ПРЕМИАЛЬНЫЙ ДЕТЕЙЛИНГ В ИРКУТСКЕ</h1>
+            <p class="hero-subtitle">Возвращаем автомобилям безупречный внешний вид. Защита, восстановление и индивидуальный стиль вашего автомобиля.</p>
+            <div class="hero-buttons">
+                <a href="https://wa.me/79140062777" target="_blank" class="btn btn-primary">Записаться</a>
+                <a href="#services" class="btn btn-outline">Наши услуги</a>
+            </div>
+        </div>
+
+        <div class="hero-meta">
+            <span>CAR CARE</span>
+            <span>PROTECTION</span>
+            <span>RESTORATION</span>
+        </div>
+
+        <div class="scroll-indicator">
+            <span>SCROLL</span>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+        <!-- Services Section -->
+    <section class="section services" id="services">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <div class="section-tag">02 / УСЛУГИ</div>
+                <h2 class="section-title">НАШИ УСЛУГИ</h2>
+                <p class="section-subtitle">Комплексный уход, защита и восстановление вашего автомобиля.</p>
+            </div>
+
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card fade-in-up">
+                    <div class="service-card-image">
+                        <img src="polish.jpg" alt="Полировка кузова" loading="lazy">
+                    </div>
+                    <div class="service-card-content">
+                        <div class="service-number">01</div>
+                        <h3 class="service-name">Полировка</h3>
+                        <p class="service-desc">Восстановление блеска, устранение мелких дефектов лакокрасочного покрытия и придание кузову глубокого глянца.</p>
+                        <div class="service-price">от 9 000 ₽</div>
+                        <a href="https://wa.me/79140062777" target="_blank" class="btn btn-outline btn-small">Записаться</a>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card fade-in-up">
+                    <div class="service-card-image">
+                        <img src="landcruiser.jpg" alt="Керамическое покрытие" loading="lazy">
+                    </div>
+                    <div class="service-card-content">
+                        <div class="service-number">02</div>
+                        <h3 class="service-name">Керамика</h3>
+                        <p class="service-desc">Защитное покрытие кузова, усиление блеска и облегчение последующего ухода за автомобилем.</p>
+                        <div class="service-price">от 10 000 ₽</div>
+                        <a href="https://wa.me/79140062777" target="_blank" class="btn btn-outline btn-small">Записаться</a>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card fade-in-up">
+                    <div class="service-card-image">
+                        <img src="mercedes.jpg" alt="Бронирование пленкой" loading="lazy">
+                    </div>
+                    <div class="service-card-content">
+                        <div class="service-number">03</div>
+                        <h3 class="service-name">Бронирование</h3>
+                        <p class="service-desc">Защита кузова полиуретановой пленкой от сколов, царапин и дорожных воздействий.</p>
+                        <div class="service-price">от 35 000 ₽</div>
+                        <a href="https://wa.me/79140062777" target="_blank" class="btn btn-outline btn-small">Записаться</a>
+                    </div>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="service-card fade-in-up">
+                    <div class="service-card-image">
+                        <img src="wash.jpg" alt="Химчистка салона" loading="lazy">
+                    </div>
+                    <div class="service-card-content">
+                        <div class="service-number">04</div>
+                        <h3 class="service-name">Химчистка</h3>
+                        <p class="service-desc">Профессиональная глубокая очистка салона, восстановление чистоты и свежести интерьера.</p>
+                        <div class="service-price">от 7 000 ₽</div>
+                        <a href="https://wa.me/79140062777" target="_blank" class="btn btn-outline btn-small">Записаться</a>
+                    </div>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="service-card fade-in-up">
+                    <div class="service-card-image">
+                        <img src="process.jpg" alt="Удаление вмятин" loading="lazy">
+                    </div>
+                    <div class="service-card-content">
+                        <div class="service-number">05</div>
+                        <h3 class="service-name">Удаление вмятин</h3>
+                        <p class="service-desc">Восстановление геометрии кузовных элементов и устранение вмятин без повреждения ЛКП.</p>
+                        <div class="service-price">от 1 000 ₽</div>
+                        <a href="https://wa.me/79140062777" target="_blank" class="btn btn-outline btn-small">Записаться</a>
+                    </div>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="service-card fade-in-up">
+                    <div class="service-card-image">
+                        <img src="audi.jpg" alt="Кузовной ремонт" loading="lazy">
+                    </div>
+                    <div class="service-card-content">
+                        <div class="service-number">06</div>
+                        <h3 class="service-name">Кузовной ремонт</h3>
+                        <p class="service-desc">Восстановление кузова, устранение повреждений и возвращение автомобилю аккуратного внешнего вида.</p>
+                        <div class="service-price">от 12 000 ₽</div>
+                        <a href="https://wa.me/79140062777" target="_blank" class="btn btn-outline btn-small">Записаться</a>
+                    </div>
+                </div>
+
+                <!-- Service 7 -->
+                <div class="service-card fade-in-up">
+                                       <div class="service-card-image" style="height: 350px;">
+                        <img src="restyling.jpg" alt="Рестайлинг ТЛК 200" loading="lazy" style="object-fit: cover; object-position: center;">
+                    </div>
+                    <div class="service-card-content">
+                        <div class="service-number">07</div>
+                        <h3 class="service-name">Рестайлинг</h3>
+                        <p class="service-desc">Комплексное преображение автомобиля, изменение внешнего облика и создание индивидуального стиля.</p>
+                        <div class="service-price">от 100 000 ₽</div>
+                        <a href="https://wa.me/79140062777" target="_blank" class="btn btn-outline btn-small">Записаться</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section></section>
+
+    <!-- Why Choose Us Section -->
+    <section class="section why-us" id="why-us">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <div class="section-tag">03 / ПРЕИМУЩЕСТВА</div>
+                <h2 class="section-title">ДЕТАЛИ СОЗДАЮТ РЕЗУЛЬТАТ</h2>
+                <p class="section-subtitle">Мы не просто ухаживаем за автомобилями. Мы возвращаем им характер, эстетику и безупречный внешний вид.</p>
+            </div>
+
+            <div class="why-us-grid">
+                <div class="why-us-image fade-in-up">
+                    <img src="process.jpg" alt="Мастер полирует BMW в студии Абрам" loading="lazy">
+                </div>
+                
+                <div class="advantages-list">
+                    <div class="advantage-item fade-in-up">
+                        <div class="advantage-number">01</div>
+                        <div class="advantage-content">
+                            <h3>ОФИЦИАЛЬНЫЙ АВТОСЕРВИС</h3>
+                            <p>Профессиональный подход к обслуживанию автомобилей, внимание к качеству и соблюдение технологических процессов.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="advantage-item fade-in-up">
+                        <div class="advantage-number">02</div>
+                        <div class="advantage-content">
+                            <h3>ИНДИВИДУАЛЬНЫЙ ПОДХОД</h3>
+                            <p>Директор Дмитрий лично уделяет внимание пожеланиям клиентов и помогает подобрать оптимальное решение для каждого автомобиля.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="advantage-item fade-in-up">
+                        <div class="advantage-number">03</div>
+                        <div class="advantage-content">
+                            <h3>ОПЫТНЫЕ МАСТЕРА</h3>
+                            <p>Квалифицированные специалисты, профессиональное оборудование и внимание к каждой детали.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="advantage-item fade-in-up">
+                        <div class="advantage-number">04</div>
+                        <div class="advantage-content">
+                            <h3>СЕРТИФИКАТЫ И КАЧЕСТВО</h3>
+                            <p>Работа с профессиональными материалами и соблюдение стандартов качества на каждом этапе.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="about-content fade-in-up">
+                <div class="section-tag" style="justify-content: center;">04 / О НАС</div>
+                <h2 class="section-title" style="margin-bottom: 32px;">АВТОМОБИЛЬ ЗАСЛУЖИВАЕТ БОЛЬШЕГО</h2>
+                <p class="about-text">
+                    АБРАМ — студия профессионального детейлинга в Иркутске. Мы объединяем внимание к деталям, современные технологии и индивидуальный подход, чтобы каждый автомобиль выглядел безупречно.<br><br>
+                    Для нас важен не просто результат на фотографиях, а качество работы, которое можно увидеть в каждой детали.
+                </p>
+                <div class="about-highlight">ВАШ АВТОМОБИЛЬ. НАШЕ МАСТЕРСТВО.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta">
+        <div class="container">
+            <div class="cta-content fade-in-up">
+                <h2 class="cta-title">ПОРА ПРИВЕСТИ АВТОМОБИЛЬ В ИДЕАЛЬНОЕ СОСТОЯНИЕ?</h2>
+                <p class="cta-text">Свяжитесь с нами, расскажите о своем автомобиле и получите консультацию по подходящим услугам.</p>
+                <a href="https://wa.me/79140062777" target="_blank" class="btn btn-primary">Записаться в WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacts Section -->
+    <section class="section contacts" id="contacts">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <div class="section-tag">05 / КОНТАКТЫ</div>
+                <h2 class="section-title">МЫ ЖДЕМ ВАС В АБРАМ</h2>
+            </div>
+
+            <div class="contacts-grid">
+                <div class="contacts-image fade-in-up">
+                    <img src="fasad.jpg" alt="Фасад студии детейлинга АБРАМ в Иркутске" loading="lazy">
+                </div>
+
+                <div class="contacts-info fade-in-up">
+                    <div class="contact-block">
+                        <h3>СТУДИЯ ДЕТЕЙЛИНГА «АБРАМ»</h3>
+                        <p>Иркутск, ул. Новаторов, 36А</p>
+                    </div>
+
+                    <div class="contact-block">
+                        <h3>ТЕЛЕФОН</h3>
+                        <a href="tel:+79140062777">+7 (914) 006-27-77</a>
+                    </div>
+
+                    <div class="contact-block">
+                        <h3>ДИРЕКТОР</h3>
+                        <p>Дмитрий</p>
+                    </div>
+
+                    <div class="contact-actions">
+                        <a href="tel:+79140062777" class="btn btn-outline btn-contact">Позвонить</a>
+                        <a href="https://wa.me/79140062777" target="_blank" class="btn btn-primary btn-contact">WhatsApp</a>
+                        <!-- Указать ссылку на Telegram -->
+                        <a href="#" class="btn btn-telegram btn-contact" onclick="alert('Ссылка на Telegram будет добавлена позже'); return false;">Telegram</a>
+                    </div>
+
+                    <a href="https://yandex.ru/maps/?text=Иркутск,+ул.+Новаторов,+36А" target="_blank" class="btn btn-outline btn-small" style="margin-top: 16px; width: fit-content;">
+                        Построить маршрут
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-logo">
+                    <div class="logo">
+                        <span class="logo-main">АБРАМ</span>
+                        <span class="logo-sub">DETAILING STUDIO</span>
+                    </div>
+                    <p class="footer-desc">Премиальный уход, защита и восстановление вашего автомобиля в Иркутске.</p>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">НАВИГАЦИЯ</h4>
+                    <div class="footer-links">
+                        <a href="#hero" class="footer-link">Главная</a>
+                        <a href="#services" class="footer-link">Услуги</a>
+                        <a href="#why-us" class="footer-link">Почему мы</a>
+                        <a href="#about" class="footer-link">О нас</a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">УСЛУГИ</h4>
+                    <div class="footer-links">
+                        <a href="#services" class="footer-link">Полировка</a>
+                        <a href="#services" class="footer-link">Керамика</a>
+                        <a href="#services" class="footer-link">Бронирование</a>
+                        <a href="#services" class="footer-link">Химчистка</a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">КОНТАКТЫ</h4>
+                    <div class="footer-links">
+                        <a href="tel:+79140062777" class="footer-link">+7 (914) 006-27-77</a>
+                        <span class="footer-link">Иркутск, ул. Новаторов, 36А</span>
+                        <a href="https://wa.me/79140062777" target="_blank" class="footer-link" style="color: var(--accent-orange);">Написать в WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="copyright">© 2026 АБРАМ. ВСЕ ПРАВА ЗАЩИЩЕНЫ.</div>
+                <div class="copyright">Премиальный детейлинг в Иркутске</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Fixed CTA -->
+    <div class="mobile-fixed-cta">
+        <a href="https://wa.me/79140062777" target="_blank" class="btn btn-primary" style="width: 100%;">Записаться в WhatsApp</a>
+    </div>
+
+    <script>
+        // Header scroll effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        const burger = document.getElementById('burger');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        burger.addEventListener('click', () => {
+            burger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+            document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                burger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in-up').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scroll for anchor links (fallback for older browsers)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
